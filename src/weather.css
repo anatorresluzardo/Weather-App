@@ -1,0 +1,54 @@
+.form-control {
+  width: 525px;
+}
+
+.btn {
+  position: relative;
+  top: -38px;
+  left: 530px;
+}
+
+.temperature {
+  color: dimgray;
+  font-size: 70px;
+  text-align: center;
+}
+.city {
+  color: dimgray;
+  font-size: 30px;
+  text-align: center;
+}
+
+.feel {
+  text-align: center;
+  color: dimgray;
+  font-size: 15px;
+}
+.humidity {
+  text-align: center;
+  color: dimgray;
+  font-size: 15px;
+}
+.dia {
+  text-align: center;
+  border: solid;
+  border-color: rgb(124, 124, 124);
+  border-bottom-width: 0px;
+  color: rgb(124, 124, 124);
+}
+.tempdia {
+  text-align: center;
+  border: solid;
+  border-color: rgb(124, 124, 124);
+  font-size: 30px;
+  color: rgb(124, 124, 124);
+  border-top-color: rgb(182, 181, 181);
+}
+h2 {
+  color: rgb(124, 124, 124);
+  font-size: 18px;
+  text-align: center;
+}
+.tempType {
+  text-align: center;
+}
