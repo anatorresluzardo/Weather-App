@@ -59,3 +59,15 @@ let changeRealTempF = document.querySelector("#temperature-f");
 changeRealTempF.addEventListener("click", searchCityFa);
 let changeRealTempC = document.querySelector("#temperature-c");
 changeRealTempC.addEventListener("click", searchCity);
+
+// Location
+
+function userPosition(position) {
+  let latitud = position.coords.latitude;
+  let longitud = position.coords.longitude;
+  let apiKey = "0a0e5df8ac15e815913056404c810c25";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
+}
+function getLocation
+navigator.geolocation.getCurrentPosition(userPosition);

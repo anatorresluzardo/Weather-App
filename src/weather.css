@@ -8,7 +8,11 @@
   top: -38px;
   left: 915px;
 }
-
+.get-location {
+  position: relative;
+  top: -38px;
+  left: 1000px;
+}
 .temperature {
   color: dimgray;
   font-size: 70px;
