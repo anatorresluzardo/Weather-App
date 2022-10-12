@@ -34,6 +34,15 @@ function displayWeather(response) {
   humidity.innerHTML = `💧 Humidity:  ${Math.round(
     response.data.main.humidity
   )} %`;
+  // test emoji
+  document
+    .querySelector("#condition-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  //let showWeatherCondition = document.querySelector("#weather-emoji");
+  //showWeatherCondition.innerHTML = response.data.weather[0].main;
 }
 
 function searchCity(event) {
@@ -75,3 +84,5 @@ function userCurrentLocation(event) {
 
 let locationButton = document.querySelector("#get-location");
 locationButton.addEventListener("click", userCurrentLocation);
+
+// emoji change
