@@ -17,9 +17,15 @@
     
   </head>
   <body>
-    <div class="app">
+   
     <div class="container">
-    <div class="row justify-content-center">
+    
+
+  
+
+    
+<div class="displayApp" id="displayApp">
+  <div class="row justify-content-center">
 <form id="search-city">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label"></label>
@@ -29,37 +35,35 @@
   
 </div>
   </div>
-
-  
-</div>
-    </div>
- <img id="condition-icon"/>
+  <img id="condition-icon"/>
+  <div id="condition-text"></div>
     <div class="city" id="current-city"></div>
-    <h2 id="current-time"></h2>
     <div class="temperature" id="currentTemp"></div>
+    <h2 id="current-time"></h2>
     <div class="tempType">
-    <a href="#" class="tempC" id="temperature-c">°C</a> /
-    <a href="#" class="tempF" id="temperature-f">°F</a>
+      <a href="#" class="tempC" id="temperature-c">°C</a> /
+      <a href="#" class="tempF" id="temperature-f">°F</a>
     </div>
     <div class="feel" id=real-feel></div>
     <div class="humidity" id=humidity></div>
     <br>
-
+    
     <div class="row">
-    <div class="col-2 ms-auto dia">
+      <div class="col-2 ms-auto dia">
       Mon
     </div>
     <div class="col-2 ms-auto dia">
-     Tue
+      Tue
     </div>
         <div class="col-2 ms-auto dia">
-      Wed
-    </div>
-    <div class="col-2 ms-auto dia">
+          Wed
+        </div>
+        <div class="col-2 ms-auto dia">
      Thu
     </div>    <div class="col-2 ms-auto dia">
       Fri   
-     </div>
+    </div>
+  
    
  
   </div>
@@ -95,6 +99,10 @@
 
 </div>
 
+</div>
+
+  
+
 <br>
 <p class="source-link"><a href="https://github.com/anatorresluzardo/Weather-App">Open-source code </a> by Ana Torres</p>
 </body>
@@ -103,5 +111,6 @@
      </span>
    </div>
  </form>
+ </div>
   </body>
 </html>

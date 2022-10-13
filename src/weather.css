@@ -14,34 +14,37 @@
   left: 1000px;
 }
 .temperature {
-  color: dimgray;
+  color: rgb(255, 255, 255);
   font-size: 70px;
   text-align: center;
+  text-shadow: 2px 2px 4px #4c4c4c;
 }
 .city {
-  color: dimgray;
-  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
   text-align: center;
+  text-shadow: 2px 2px 4px #4c4c4c;
 }
 
 .feel {
   text-align: center;
-  color: dimgray;
+  color: rgb(255, 255, 255);
   font-size: 15px;
 }
 .humidity {
   text-align: center;
-  color: dimgray;
+  color: rgb(255, 255, 255);
   font-size: 15px;
 }
 .dia {
   text-align: center;
   border: solid;
-  border-color: rgb(124, 124, 124);
+  border-color: rgb(255, 255, 255);
   border-bottom-width: 0px;
-  color: rgb(124, 124, 124);
+  color: rgb(255, 255, 255);
   margin: 0 auto;
 }
+
 .tempdia {
   text-align: center;
   border: solid;
@@ -52,13 +55,25 @@
   margin: 0 auto;
 }
 h2 {
-  color: rgb(124, 124, 124);
+  color: rgb(255, 255, 255);
   font-size: 18px;
   text-align: center;
 }
 .tempType {
   text-align: center;
+  color: rgb(255, 255, 255);
 }
+a {
+  color: #05006a;
+}
+a:hover {
+  text-decoration: none;
+  color: #b9b8c9;
+}
+.sourceCode {
+  color: #180747;
+}
+
 .source-link {
   display: block;
   text-align: center;
@@ -72,4 +87,20 @@ h3 {
 #condition-icon {
   margin: 0 auto;
   display: block;
+}
+
+#condition-text {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.displayApp {
+  background: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  margin-left: 70px;
+  margin-right: 70px;
+  border-radius: 10px;
 }

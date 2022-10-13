@@ -12,6 +12,7 @@ let days = [
 
 let currentDay = days[currentTime.getDay()];
 let currentHours = currentTime.getHours();
+
 let currentMinutes = currentTime.getMinutes();
 if (currentMinutes < 10) {
   currentMinutes = `0${currentMinutes}`;
@@ -41,8 +42,9 @@ function displayWeather(response) {
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
-  //let showWeatherCondition = document.querySelector("#weather-emoji");
-  //showWeatherCondition.innerHTML = response.data.weather[0].main;
+
+  let changeconditionText = document.querySelector("#condition-text");
+  changeconditionText.innerHTML = response.data.weather[0].description;
 }
 
 function searchCity(event) {
