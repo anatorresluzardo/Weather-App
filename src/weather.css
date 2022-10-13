@@ -39,19 +39,22 @@
 .dia {
   text-align: center;
   border: solid;
-  border-color: rgb(255, 255, 255);
+  border-color: rgb(27, 87, 148);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border-bottom-width: 0px;
   color: rgb(255, 255, 255);
   margin: 0 auto;
+  background-color: rgb(27, 87, 148);
 }
 
 .tempdia {
   text-align: center;
   border: solid;
-  border-color: rgb(124, 124, 124);
+  border-color: rgb(27, 87, 148);
   font-size: 30px;
   color: rgb(124, 124, 124);
-  border-top-color: rgb(182, 181, 181);
+  border-top-color: rgb(27, 87, 148);
   margin: 0 auto;
 }
 h2 {
@@ -96,9 +99,9 @@ h3 {
 
 .displayApp {
   background: radial-gradient(
-    circle at 12.3% 19.3%,
-    rgb(85, 88, 218) 0%,
-    rgb(95, 209, 249) 100.2%
+    circle at 10% 20%,
+    rgb(59, 149, 237) 0%,
+    rgb(7, 91, 173) 90%
   );
   margin-left: 70px;
   margin-right: 70px;
