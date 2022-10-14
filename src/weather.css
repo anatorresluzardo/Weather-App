@@ -1,18 +1,10 @@
-.form-control {
-  width: 525px;
-  margin: 0 auto;
+.btn {
+  margin-top: 25px;
+  padding-left: 45px;
+  padding-right: 45px;
+  font-size: 15px;
 }
 
-.btn {
-  position: relative;
-  top: -38px;
-  left: 915px;
-}
-.get-location {
-  position: relative;
-  top: -38px;
-  left: 1000px;
-}
 .temperature {
   color: rgb(255, 255, 255);
   font-size: 70px;
@@ -105,5 +97,6 @@ h3 {
   );
   margin-left: 70px;
   margin-right: 70px;
+
   border-radius: 10px;
 }

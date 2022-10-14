@@ -25,18 +25,23 @@
 
     
 <div class="displayApp" id="displayApp">
-  <div class="row justify-content-center">
-<form id="search-city">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label"></label>
-    <input type="text" class="form-control" id="search-input" placeholder="Type your current city" aria-describedby="emailHelp">
-    <button type="submit"  class="btn btn-secondary" id="city-tipe" title="Search city"><i class="bi bi-search"></i></button>
-      <button type="button"  class="btn btn-success" id="get-location" title="Your current weather"><i class="bi bi-geo-alt-fill"></i></button>
-  
-</div>
-  </div>
-  <img id="condition-icon"/>
-  <div id="condition-text"></div>
+  <div class="container text-center">
+  <div class="row">
+    <div class="col-7 ms-auto">
+      <form id="search-city">
+        <label for="exampleInputEmail1" class="form-label"></label>
+        <input type="text" class="form-control" id="search-input" placeholder="Type your current city" aria-describedby="emailHelp">
+      </div>
+      <div class="col-2 ms-auto">
+        <button type="submit"  class="btn btn-secondary" id="city-tipe" title="Search city"> <i class="bi bi-search"></i></button>
+      </div>
+    <div class="col-3 ms-auto">
+      <button type="button"  class="btn btn-success" id="get-location" title="Your current weather">Use your location <i class="bi bi-geo-alt-fill"></i></button>
+    </div>
+    </div>
+    <br>
+    <img id="condition-icon"/>
+    <div id="condition-text"></div>
     <div class="city" id="current-city"></div>
     <div class="temperature" id="currentTemp"></div>
     <h2 id="current-time"></h2>
@@ -104,6 +109,7 @@
   
 
 <br>
+</div>
 <p class="source-link"><a class="sourceCode" href="https://github.com/anatorresluzardo/Weather-App">Open-source code </a> by Ana Torres</p>
 </body>
 <script = src="src/java.js"></script>
