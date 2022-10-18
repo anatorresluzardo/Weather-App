@@ -49,6 +49,7 @@
   border-top-color: rgb(27, 87, 148);
   margin: 0 auto;
 }
+
 h2 {
   color: rgb(255, 255, 255);
   font-size: 18px;
@@ -58,12 +59,18 @@ h2 {
   text-align: center;
   color: rgb(255, 255, 255);
 }
+
 a {
   color: #05006a;
 }
+
 a:hover {
   text-decoration: none;
   color: #b9b8c9;
+}
+#temperature-c:active {
+  color: aqua;
+  cursor: default;
 }
 .sourceCode {
   color: #180747;
@@ -99,4 +106,8 @@ h3 {
   margin-right: 70px;
 
   border-radius: 10px;
+}
+
+body {
+  background: #d3d3d3;
 }

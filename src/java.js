@@ -30,12 +30,13 @@ function displayWeather(response) {
   let realTemperature = document.querySelector("#real-feel");
   realTemperature.innerHTML = `🌡️ Real temperature: ${Math.round(
     response.data.main.feels_like
-  )} c°`;
+  )} °`;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `💧 Humidity:  ${Math.round(
     response.data.main.humidity
   )} %`;
-  // test emoji
+
+  // weather icon
   document
     .querySelector("#condition-icon")
     .setAttribute(
@@ -57,12 +58,17 @@ function searchCity(event) {
 
 let searchCityForm = document.querySelector("#search-city");
 searchCityForm.addEventListener("submit", searchCity);
-// prueba Far
+
+// Change Real temp to F/C
+
 function searchCityFa(event) {
   event.preventDefault();
   let currentCity = document.querySelector("#search-input");
   let apiKey = "0a0e5df8ac15e815913056404c810c25";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity.value}&appid=${apiKey}&units=imperial`;
+  changeRealTempC.classList.remove("active");
+  changeRealTempF.classList.add("active");
+
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -87,4 +93,15 @@ function userCurrentLocation(event) {
 let locationButton = document.querySelector("#get-location");
 locationButton.addEventListener("click", userCurrentLocation);
 
-// emoji change
+// Change Local temp to F/C
+function userPositionFa(position) {
+  let latitud = position.coords.latitude;
+  let longitud = position.coords.longitude;
+  let apiKey = "0a0e5df8ac15e815913056404c810c25";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayWeather);
+}
+let changeLocalTempF = document.querySelector("#temperature-f");
+changeRealTempF.addEventListener("click", userPositionFa);
+let changeLocalTempC = document.querySelector("#temperature-c");
+changeRealTempC.addEventListener("click", userPosition);
