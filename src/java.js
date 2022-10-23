@@ -21,6 +21,14 @@ if (currentMinutes < 10) {
 let currentDate = document.querySelector("#current-time");
 currentDate.innerHTML = `Today is ${currentDay}, ${currentHours}:${currentMinutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 // Real temperature
 function displayWeather(response) {
   let city = document.querySelector("#current-city");
@@ -46,6 +54,10 @@ function displayWeather(response) {
 
   let changeconditionText = document.querySelector("#condition-text");
   changeconditionText.innerHTML = response.data.weather[0].description;
+
+  celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 // get forecast
 function displayForecast(response) {
@@ -113,6 +125,7 @@ function userPosition(position) {
   axios.get(apiUrl).then(displayWeather);
 }
 function userCurrentLocation(event) {
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(userPosition);
 }
 
@@ -125,14 +138,14 @@ function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
 
-  let fahrenheitTemperature = (realCurrentTemperature * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 function displayCelsiusTemperature(event) {
   event.preventDefault();
 
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(realCurrentTemperature);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#temperature-f");
@@ -140,3 +153,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#temperature-c");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let celsiusTemperature = null;
