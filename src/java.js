@@ -44,6 +44,11 @@ function displayWeather(response) {
     response.data.main.humidity
   )} %`;
 
+  let windSpeed = document.querySelector("#wind-speed");
+  windSpeed.innerHTML = `🍃 Wind speed: ${Math.round(
+    response.data.wind.speed
+  )} km/h`;
+
   // weather icon
   document
     .querySelector("#condition-icon")
@@ -56,7 +61,8 @@ function displayWeather(response) {
   changeconditionText.innerHTML = response.data.weather[0].description;
 
   celsiusTemperature = response.data.main.temp;
-
+  feelsLikeTemperature = Math.round(response.data.main.feels_like);
+  windspeedconversion = response.data.wind.speed;
   getForecast(response.data.coord);
 }
 // get forecast
@@ -136,16 +142,35 @@ locationButton.addEventListener("click", userCurrentLocation);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#currentTemp");
 
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  temperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}°`;
+
+  let realfeelElement = document.querySelector("#real-feel");
+  let fahrenheitRealFeel = (feelsLikeTemperature * 9) / 5 + 32;
+  realfeelElement.innerHTML = `🌡️ Real temperature: ${Math.round(
+    fahrenheitRealFeel
+  )}°`;
+  let windSpeedDisplay = document.querySelector("#wind-speed");
+  let windSpeedMiles = windspeedconversion / 1.609;
+  windSpeedDisplay.innerHTML = `🍃 Wind speed: ${Math.round(
+    windSpeedMiles
+  )} mph`;
 }
 function displayCelsiusTemperature(event) {
   event.preventDefault();
 
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  let temperatureElement = document.querySelector("#currentTemp");
+  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
+  let realfeelElement = document.querySelector("#real-feel");
+  realfeelElement.innerHTML = `🌡️ Real temperature: ${Math.round(
+    feelsLikeTemperature
+  )}°`;
+  let windSpeedDisplay = document.querySelector("#wind-speed");
+  windSpeedDisplay.innerHTML = `🍃 Wind speed: ${Math.round(
+    windspeedconversion
+  )} km/h`;
 }
 
 let fahrenheitLink = document.querySelector("#temperature-f");

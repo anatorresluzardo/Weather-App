@@ -28,26 +28,19 @@
   color: rgb(255, 255, 255);
   font-size: 15px;
 }
-.dia {
+.windspeed {
   text-align: center;
-  border: solid;
-  border-color: rgb(27, 87, 148);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-width: 0px;
   color: rgb(255, 255, 255);
-  margin: 0 auto;
-  background-color: rgb(27, 87, 148);
+  font-size: 15px;
 }
-
-.tempdia {
+.weather-forecast {
   text-align: center;
-  border: solid;
-  border-color: rgb(27, 87, 148);
-  font-size: 30px;
-  color: rgb(124, 124, 124);
-  border-top-color: rgb(27, 87, 148);
+
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  background-color: #ffffff3d;
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 h2 {
