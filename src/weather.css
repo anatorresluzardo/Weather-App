@@ -61,7 +61,7 @@ a:hover {
   text-decoration: none;
   color: #b9b8c9;
 }
-#temperature-c:active {
+.tempType:active {
   color: aqua;
   cursor: default;
 }

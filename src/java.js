@@ -87,9 +87,9 @@ function displayForecast(response) {
           width="42"
         />
         <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> ${Math.round(
+          <span class="weather-forecast-temperature-max" id="forecast-max"> ${Math.round(
             forecastDay.temp.max
-          )}° </span>
+          )}° | </span>
           <span class="weather-forecast-temperature-min"> ${Math.round(
             forecastDay.temp.min
           )}° </span>
@@ -98,7 +98,7 @@ function displayForecast(response) {
   `;
     }
   });
-
+  forecastTempMax = document.querySelector("weather-forecast-temperature-max");
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
